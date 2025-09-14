@@ -1,0 +1,4 @@
+// Enter postgres in docker container
+docker exec -it gotweet-user-db /bin/bash
+psql -U gotweet -d users
+
