@@ -17,12 +17,13 @@ type Client struct {
 }
 
 func NewDatabaseClient() (DatabaseClient, error) {
-	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d sslmode=%s",
+	dsn := fmt.Sprintf(
+		"host=%s user=%s password=%s dbname=%s port=%d sslmode=disable",
 		"localhost",
-		"postgres",
-		"postgres",
-		5433,
-		"postgres",
+		"gotweet",
+		"secret",
+		"users", // database name
+		5433,    // port
 	)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
 		NowFunc: func() time.Time {

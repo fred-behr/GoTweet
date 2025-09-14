@@ -10,7 +10,7 @@ func main() {
 	// Simple GET endpoint
 	r.GET("/hello", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "Hello, Gin!",
+			"message": "Hello, Katya!",
 		})
 	})
 
