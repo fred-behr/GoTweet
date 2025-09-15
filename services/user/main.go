@@ -11,7 +11,6 @@ import (
 func main() {
 	r := gin.Default()
 
-	// Simple GET endpoint
 	dbClient, err := database.NewDatabaseClient()
 	if err != nil {
 		log.Fatalf("failed to connect to DB: %v", err)
